@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.burger-icon {
+    width: 80px;
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.burger-icon__bar {
+    height: 4px;
+    width: 100%;
+    background: #000;
+    position: relative;
+    transform-origin: 50% 50%;
+    transition: 400ms;
+}
+
+.burger-icon__bar:nth-child(2) {
+    margin: 10px 0;
+}
+
+.first-scene .burger-icon__bar:first-child {
+    transform: translateY(15px);
+}
+
+.first-scene .burger-icon__bar:nth-child(2) {
+    opacity: 0;
+    background: #fff;
+    transform: scale(1, 2);
+}
+
+.first-scene .burger-icon__bar:last-child {
+    transform: translateY(-15px);
+}
+
+.second-scene .burger-icon__bar:first-child {
+    transform: translateY(15px) rotate(45deg);
+}
+
+.second-scene .burger-icon__bar:nth-child(2) {
+    opacity: 1;
+    background-color: #fff;
+    transform: rotate(-45deg) scale(1, 4);
+}
+
+.second-scene .burger-icon__bar:last-child {
+    transform: translateY(-15px) rotate(-45deg);
+}
